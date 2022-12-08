@@ -13,12 +13,14 @@ import java.time.format.DateTimeFormatter;
 public class Program {
     public static void main(String[] args) {
 
-        Department dp=new Department(1,"Vendas");
+        //Department dp=new Department(1,"Vendas");
 
-        System.out.println(dp);
-        Seller sl=new Seller(21,"Maria","Maria@maria", LocalDate.now() ,200.0,dp);
-        System.out.println(sl);
+        //System.out.println(dp);
+       // Seller sl=new Seller(21,"Maria","Maria@maria", LocalDate.now() ,200.0,dp);
+       // System.out.println(sl);
         SellerDao sellerDao= DaoFactory.createSellerDao();// injeção de dependencia
+        Seller seller=sellerDao.findById(8);
+        System.out.println(seller);
 
     }
 }

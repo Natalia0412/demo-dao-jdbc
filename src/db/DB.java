@@ -9,7 +9,7 @@ public class DB {
     private static final String serverport = "1433";
     private static final String dbName = "COURSEJDBC";
     private static final String url = "jdbc:sqlserver://" + serverip + "\\SQLEXPRESS:" + serverport + ";databaseName=" + dbName;
-    private static final String dataBaseName = "na";
+    private static final String dataBaseName = "sa";
     private static final String dataBasePassword = "14n2016";
 
     public static Connection getConnection() {
