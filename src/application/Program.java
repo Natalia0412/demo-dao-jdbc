@@ -1,5 +1,7 @@
 package application;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -16,6 +18,7 @@ public class Program {
         System.out.println(dp);
         Seller sl=new Seller(21,"Maria","Maria@maria", LocalDate.now() ,200.0,dp);
         System.out.println(sl);
+        SellerDao sellerDao= DaoFactory.createSellerDao();// injeção de dependencia
 
     }
 }
