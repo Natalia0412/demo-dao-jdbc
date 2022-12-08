@@ -1,6 +1,7 @@
 package model.entities;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.Objects;
 
@@ -51,7 +52,7 @@ public class Seller implements Serializable {
         return bithDate;
     }
 
-    public void setBithDate(LocalDate bithDate) {
+    public void setBithDate(Date bithDate) {
         this.bithDate = bithDate;
     }
 
