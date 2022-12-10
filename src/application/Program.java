@@ -31,9 +31,7 @@ public class Program {
              ) {
             System.out.println(obj);
         }
-        System.out.println("Teste numero 2:seller findALL");
-
-
+       /* System.out.println("Teste numero 2:seller findALL");
         list=sellerDao.findaAll();
         for (Seller obj: list
         ) {
@@ -42,7 +40,11 @@ public class Program {
         System.out.println("Teste numero 3:seller insert");
         Seller newSeller=new Seller(null, "Greg","greg@mail", LocalDate.now(),40.0,dep);
         sellerDao.insert(newSeller);
-        System.out.println(newSeller.getId());
+        System.out.println(newSeller.getId());*/
+        System.out.println("Teste numero 4:seller update");
+        seller=sellerDao.findById(8);
+        seller.setName("Martha Waine");
+        sellerDao.update(seller);
 
     }
 }
