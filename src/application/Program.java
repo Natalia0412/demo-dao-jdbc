@@ -11,9 +11,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
 
         //Department dp=new Department(1,"Vendas");
 
@@ -31,20 +33,25 @@ public class Program {
              ) {
             System.out.println(obj);
         }
-       /* System.out.println("Teste numero 2:seller findALL");
+       System.out.println("Teste numero 2:seller findALL");
         list=sellerDao.findaAll();
         for (Seller obj: list
         ) {
             System.out.println(obj);
         }
-        System.out.println("Teste numero 3:seller insert");
+        /*System.out.println("Teste numero 3:seller insert");
         Seller newSeller=new Seller(null, "Greg","greg@mail", LocalDate.now(),40.0,dep);
         sellerDao.insert(newSeller);
-        System.out.println(newSeller.getId());*/
+        System.out.println(newSeller.getId());
         System.out.println("Teste numero 4:seller update");
         seller=sellerDao.findById(8);
         seller.setName("Martha Waine");
-        sellerDao.update(seller);
+        sellerDao.update(seller);*/
+        System.out.println("Teste numero 5:seller delete");
+        System.out.println("Enter com um id para teste de deleção");
+        int id=sc.nextInt();
+        sellerDao.deleteById(id);
+        sc.close();
 
     }
 }
