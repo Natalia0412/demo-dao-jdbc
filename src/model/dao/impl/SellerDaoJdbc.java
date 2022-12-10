@@ -202,7 +202,10 @@ public class SellerDaoJdbc implements SellerDao {
             st.setInt(1, department.getId());
             rs = st.executeQuery();
             List<Seller> list = new ArrayList<>();
-            Map<Integer, Department> map = new HashMap<>();
+            Map<Integer, Department> map = new HashMap<>();/// impede que instancie o mesmo department.getId()
+            //ou seja  department.getId()=2, ao invés de ter vendedor A department.getId(2) e vendedor B department.getId(2)
+            //vai ser vendedor  A e vendedor B  department.getId(2)
+            // resumindo a list vai trazer os seller mas vai apontar pra mesma referencia na memoria
             while (rs.next()) {
                 Department dep = map.get(rs.getInt("DepartmentId"));
                 if (dep == null) {
